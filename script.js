@@ -1,5 +1,5 @@
 const apikey = "CJFnFdF4tiklL4Ae5SxB8cNM4tdBLP9MZwN0K9jOUHE";
-const count = 15; // Number of photos to fetch
+const count = 10; // Number of photos to fetch
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apikey}&count=${count}`;
 
 let images = [];
@@ -30,7 +30,7 @@ function displayPhotos(arr) {
         image.src = obj.urls.regular;
         image.alt = obj.alt_description || "Unsplash Image";
         image.title = obj.alt_description || "Unsplash Image";
-        image.loading = "lazy"; // Improves performance with lazy loading
+        // image.loading = "lazy"; // Improves performance with lazy loading
 
         anchor.append(image);
         fragment.append(anchor);
